@@ -1,5 +1,5 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: refresh-cdn
+run-name: ${{ github.actor }} is refreshing cdn
 on:
   push:
     branches: [ main ]
@@ -7,8 +7,14 @@ jobs:
   refresh-cdn:
     runs-on: ubuntu-latest
     container:
-      image: node:14.16
+      image: registry.cn-shanghai.aliyuncs.com/codev/tencent-cdn-refresh:latest
+    env:
+      SECRET_ID: ${{ secrets.SECRET_ID }}
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
     steps:
-      - name: Check for dockerenv file
-        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+      - name: sleep 5min
+        run: sleep 10
+      - name: refresh https://vinf.top
+        run: tencent-cdn-refresh purge-path --secret-id=$SECRET_ID --secret-key=$SECRET_KEY https://vinf.top
 

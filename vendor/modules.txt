@@ -1,0 +1,19 @@
+# github.com/inconshreveable/mousetrap v1.0.1
+## explicit; go 1.18
+github.com/inconshreveable/mousetrap
+# github.com/spf13/cobra v1.6.1
+## explicit; go 1.15
+github.com/spf13/cobra
+# github.com/spf13/pflag v1.0.5
+## explicit; go 1.12
+github.com/spf13/pflag
+# github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cdn v1.0.535
+## explicit; go 1.14
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cdn/v20180606
+# github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.535
+## explicit; go 1.14
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/errors
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/http
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/profile
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/regions
