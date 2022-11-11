@@ -13,8 +13,8 @@ jobs:
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
 
     steps:
-      - name: sleep 5min
-        run: sleep 10
-      - name: refresh https://vinf.top
-        run: tencent-cdn-refresh purge-path --secret-id=$SECRET_ID --secret-key=$SECRET_KEY https://vinf.top
+      - name: sleep 3min
+        run: sleep 180
+      - name: refresh fluffy.vinf.top
+        run: tencent-cdn-refresh purge-path --secret-id=$SECRET_ID --secret-key=$SECRET_KEY https://fluffy.vinf.top
 

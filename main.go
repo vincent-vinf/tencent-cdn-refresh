@@ -19,6 +19,11 @@ var rootCmd = &cobra.Command{
 var PurgePathCMD = &cobra.Command{
 	Use: "purge-path",
 	RunE: func(cmd *cobra.Command, args []string) error {
+		if len(args) == 0 {
+			log.Println("paths is empty")
+
+			return nil
+		}
 		secretId := cmd.Flag("secret-id").Value.String()
 		secretKey := cmd.Flag("secret-key").Value.String()
 		region := cmd.Flag("region").Value.String()
